@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Static Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: black;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .header {
+            background: url('./ConstitutionFlag2.png') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+        .content img {
+           display: block;
+           max-width: 100%;
+           height: auto;
+           margin: 20px auto;
+       }
+        .switch-container {
+            text-align: right;
+            padding: 10px;
+        }
+        .switch {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+        }
+        .switch:hover::after {
+            content: " Light Mode";
+            font-size: 14px;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+        .light-mode .switch {
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .header {
+                font-size: 1.5em;
+                height: 200px;
+                padding: 15px;
+            }
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="switch-container">
+        <button class="switch" onclick="toggleDarkMode()">🌙</button>
+    </div>
+    <div class="header">Make America Great</div>
+    <div class="content">
+        <h1>A Call to Action</h1>
+        <p>What makes the United States of America great is commitment to a process, a system, and a set of ideals that reliably carry our land and our people towards greater justice, freedom, peace, and prosperity. The foundation of that process and the bedrock of that system is the United States Constitution. The individual rights and liberties we cherish, the rule of law, free and fair elections–these are codified by the Constitution and made possible by our institutions and our norms.</p>
+        <p>We’re committed to that. That is what unites us. Among us there are Democrats, Republicans, independents, progressives, conservatives, and others still. We may disagree about how many immigrants we should let in and from where. We may disagree about what industries we should protect or which countries we should trade with and on what terms. We may disagree about what role the government should play beyond the protection of life, liberty, and property. We disagree about many other things besides–sometimes fiercely. But there is one thing on which we do not differ: the importance of the Constitution and the rule of law as the foundation of our national life.</p>
+        <p>Yet today, we see deeply cynical actors, both in private and public spheres, behaving “rationally” within narrow incentive structures are partly to blame. With every compromise of principles and every concession given freely to forces actively undermining the basic tenets of America’s constitutional republic, the closer we get to the kind of governance America fought to break free of in 1776.</p>
+        <p>We believe America is great. And America can be greater. But we must not forfeit our values. To do so would be a betrayal of those who fought and died to protect and advance the United States of America–its peace, prosperity, justice, and freedom. To do so would be a great loss for humanity; it would be the unmaking of that shining city on the hill that America, in its best moments, embodies in action and aspires to in thought.</p>
+        <p>We are a group of concerned Americans who believe they’re not alone in their concern. We think there are many, many more out there who want to make America sane again. This is a call to action to connect those who agree with the foregoing.</p>
+        <p>If this rings true to you, send a note to MAGMASA@protonmail.com</p>
+    </div>
+    <script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("light-mode");
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+</body>
+</html>
